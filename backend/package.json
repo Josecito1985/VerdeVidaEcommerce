@@ -1,0 +1,24 @@
+{
+  "name": "verdevida-backend",
+  "version": "1.0.0",
+  "description": "API backend de Verde Vida - E-commerce de frutas, verduras y alimentos naturales",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mercadopago": "^2.10.0",
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
