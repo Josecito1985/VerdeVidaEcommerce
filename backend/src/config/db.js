@@ -12,6 +12,9 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
+  ssl: {
+    rejectUnauthorized: false // ¡Clave para que conecte con Aiven!
+  }
 });
 
 // Verificación de conexión al arrancar (no bloqueante)
