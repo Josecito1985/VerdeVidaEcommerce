@@ -8,7 +8,16 @@ const errorMiddleware = require('./middlewares/error.middleware');
 
 const app = express();
 
-app.use(cors({ origin: env.frontendUrl }));
+// Configuración de CORS permitiendo múltiples orígenes (local y producción)
+app.use(cors({
+  origin: [
+    'https://verde-vida-ecommerce.vercel.app', 
+    'http://localhost:5173',
+    env.frontendUrl
+  ].filter(Boolean),
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', service: 'verdevida-backend' }));
